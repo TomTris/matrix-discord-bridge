@@ -2,7 +2,17 @@
 
 Self-hosted Discord ↔ Matrix bridge on Railway. A step-by-step guide for connecting [Element Web](https://element.io/) with Discord channels via [mautrix-discord](https://github.com/mautrix/discord).
 
-Partners use Element Web to chat. Students use Discord. Messages flow both ways — each user's display name is preserved on both sides.
+## The problem
+
+You have two groups of people who need to talk to each other — but they're on different platforms. Students are on Discord. Partners (mentors, collaborators, external stakeholders) aren't allowed to use Discord, and you'd rather not make them join Discord or manage yet another account. You need a bridge: one conversation, two platforms, no friction.
+
+## What this guide does
+
+This guide walks you through setting up that bridge from scratch, entirely self-hosted on [Railway](https://railway.app). Partners get their own chat client (Element Web) where they log in via browser. Students stay on Discord. Messages, files, and edits sync both ways — each person's display name is preserved on both sides.
+
+The setup involves five services (PostgreSQL, Synapse, Element Web, mautrix-discord, and Synapse Admin), all running as Docker containers. The guide covers every step: from creating the database to bridging your first channel to managing user registration with tokens.
+
+**This guide exists because the official docs for each component assume you already know the others.** Synapse docs don't explain Railway. mautrix-discord docs don't walk you through Synapse. Railway docs don't cover Matrix. And mautrix-discord v0.7.x changed how bot authentication works, which breaks most existing tutorials. This guide connects all the dots in order, with the fixes already applied.
 
 | Element (Matrix) | Discord |
 |:-:|:-:|
