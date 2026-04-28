@@ -26,6 +26,8 @@ Synapse Admin is a React SPA that connects to Synapse's Admin API. It provides a
    - **Password**: the admin password from Part 3d
 3. You should see the admin dashboard
 
+Note: Save this admin account somewhere. You will use it again and again in the future.
+
 ### ✅ Checkpoint
 
 The Synapse Admin dashboard loads and you can see the **Users** section with your admin account listed.
